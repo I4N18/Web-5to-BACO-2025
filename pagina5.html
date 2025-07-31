@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Pag5.css">
+    <title>Formularios</title>
+</head>
+<body>
+    <!-- Un formulario en HTML (<form>) permite recopilar datos del usuario, 
+        como texto, opciones, contraseñas, archivos, entre otros. Esta información
+         luego puede ser enviada a un servidor para procesarla (por ejemplo, para 
+         registrarse, iniciar sesión o enviar un mensaje). -->
+
+    <form class="formulario" action="procesar.php" method="post">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="correo">Correo electrónico:</label><br>
+        <input type="email" id="correo" name="correo" required><br><br>
+
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" min="1" max="120" required><br><br>
+
+        <label>Genero:</label><br>
+        <input type="radio" name="genero" value="masculino" id="masculino">
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="genero" value="femenino" id="femenino">
+        <label for="femenino">Femenino</label><br><br>
+
+        <label for="pais">País:</label><br>
+        <select name="pais" id="pais">
+            <option value="gt">Guatemala</option>
+            <option value="mx">México</option>
+            <option value="cr">Costa Rica</option>
+        </select><br><br>
+
+        <label for="comentario">Comentarios:</label><br>
+        <textarea name="comentario" id="comentario" cols="30" rows="4"></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>         
+</body>
+</html>
